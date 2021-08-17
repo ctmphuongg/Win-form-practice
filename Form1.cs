@@ -4,44 +4,63 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _11CT_18
+namespace BTVN
 {
     public partial class Form1 : Form
     {
-        public string text1;
-        public int min;
-        public int max;
+        public int score = 0;
+        public void AddScore(int point)
+        {
+            this.score += point;
+            this.label2.Text = this.score.ToString();
+        }
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            text1 = textBox1.Text;
-            Form3 otherForm2 = new Form3();
-            otherForm2.oldForm1 = this;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            min = Int32.Parse(textBox2.Text);
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            max = Int32.Parse(textBox3.Text);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 otherForm = new Form2();
-            otherForm.oldForm = this;
             otherForm.Show();
+            otherForm.oldForm = this;
+            button1.Enabled = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 otherForm3 = new Form3();
+            otherForm3.Show();
+            otherForm3.oldForm = this;
+            button2.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 otherForm4 = new Form4();
+            otherForm4.Show();
+            otherForm4.Oldform = this;
+            button3.Enabled = false;
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 otherForm4 = new Form4();
+            otherForm4.Show();
+            otherForm4.Oldform = this;
+            button4.Enabled = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form9 otherForm9 = new Form9();
+            otherForm9.Show();
+            otherForm9.oldForm = this;
+            otherForm9.score1 = score;
         }
     }
 }

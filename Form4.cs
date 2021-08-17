@@ -10,22 +10,12 @@ using System.Windows.Forms;
 
 namespace BTVN
 {
-    public partial class Form3 : Form
+    public partial class Form4 : Form
     {
-        public Form1 oldForm;
-        public Form3()
+        public Form1 Oldform;
+        public Form4()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            oldForm.AddScore(1);
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            button4.Enabled = false;
-            button1.BackColor = Color.Green;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,13 +27,23 @@ namespace BTVN
             button2.BackColor = Color.Red;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = false;
-            button3.BackColor = Color.Red;
+            button1.BackColor = Color.Red;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Oldform.AddScore(1);
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button3.BackColor = Color.Green;
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿namespace _11CT_18
+﻿namespace BTVN
 {
     partial class Form2
     {
@@ -28,76 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(238, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(237, 69);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Bắt đầu đoán";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 124);
+            this.label1.Location = new System.Drawing.Point(43, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Dự đoán của bạn là:";
+            this.label1.Size = new System.Drawing.Size(197, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Việt Nam thuộc châu nào?";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(74, 110);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 48);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "A. Châu Á";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.HienThiThongBao1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(256, 187);
+            this.button2.Location = new System.Drawing.Point(447, 110);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 49);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Nhap";
+            this.button2.Size = new System.Drawing.Size(148, 48);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "B. Châu Mỹ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // timer1
+            // button3
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button3.Location = new System.Drawing.Point(74, 244);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 52);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "C. Châu Nam Cực";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // progressBar1
+            // button4
             // 
-            this.progressBar1.Location = new System.Drawing.Point(141, 282);
-            this.progressBar1.Maximum = 1000;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(432, 33);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(256, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.button4.Location = new System.Drawing.Point(453, 244);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 52);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "D. Châu Âu";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.progressBar1);
+            this.ClientSize = new System.Drawing.Size(738, 358);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -107,11 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
